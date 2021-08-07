@@ -1,0 +1,70 @@
+.grid__wrapper {
+    display: grid;
+}
+
+.title__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #4a4a4a;
+    font-size: 24px;
+    font-weight: bold;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    border-bottom: none;
+
+    & div {
+        width: 100%;
+        text-align: center;
+        border-left: 1px solid rgba(0, 0, 0, 0.8);
+        background-color: #D1D9E3;
+        padding: 6px 8px;
+
+        &:not(:last-child) {
+            border-right: none;
+        }
+
+        &:first-child {
+            border-left: none;
+        }
+    }
+}
+
+.items__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: #F3F3F3;
+    }
+
+    &:not(:last-child) {
+        border-bottom: none;
+    }
+
+
+    & div {
+
+        width: 100%;
+        text-align: center;
+        cursor: pointer;
+        border-left: 1px solid rgba(0, 0, 0, 0.8);
+        padding: 4px 6px;
+
+        &:not(:last-child) {
+            border-right: none;
+        }
+
+        &:first-child {
+            border-left: none;
+        }
+    }
+
+    &--stripe {
+        &:nth-of-type(odd) {
+            background: #F6F9FD;
+        }
+    }
+}
